@@ -1,0 +1,22 @@
+{
+  "name": "fil-photo-booth-uploader",
+  "version": "1.0.0",
+  "description": "fil event photo booth, an lightweight app to upload photos from sparkbooth 7 to web3.storage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenks-guo-filecoin/fil-photo-booth-uploader.git"
+  },
+  "author": "Jenks Guo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenks-guo-filecoin/fil-photo-booth-uploader/issues"
+  },
+  "homepage": "https://github.com/jenks-guo-filecoin/fil-photo-booth-uploader#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
