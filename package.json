@@ -4,7 +4,8 @@
   "description": "fil event photo booth, an lightweight app to upload photos from sparkbooth 7 to web3.storage",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
