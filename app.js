@@ -1,9 +1,10 @@
 var express = require("express");
-
 var app = express();
-app.listen(8999, () => {
- console.log("Server running on port 8999");
-});
+
+// use the express-static middleware
+app.use(express.static("public"))
+
+
 
 app.post("/upload-w3s", (req, res, next) => {
     res.json({
@@ -12,3 +13,7 @@ app.post("/upload-w3s", (req, res, next) => {
         "url": "https://bafkreihx5xxfwet5tz57ipzrwp72zcornpgvujotu5nl2otgkphppscfmu.ipfs.nftstorage.link/"
     });
    });
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
