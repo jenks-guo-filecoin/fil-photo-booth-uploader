@@ -1,14 +1,10 @@
 var express = require("express");
-var app = express();
+const app = express()
+const PORT = process.env.PORT || 3000
 
-// use the express-static middleware
-app.use(express.static("public"))
-
-app.get("/", (req, res, next) => {
-    res.json({
-        "Hello":"world"
-    });
-   });
+app.get('/', (req, res) => {
+    res.send('Hello from Node.js!')
+})
 
 app.post("/upload-w3s", (req, res, next) => {
     res.json({
@@ -18,6 +14,6 @@ app.post("/upload-w3s", (req, res, next) => {
     });
    });
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
-});
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`)
+})
