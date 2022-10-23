@@ -4,7 +4,11 @@ var app = express();
 // use the express-static middleware
 app.use(express.static("public"))
 
-
+app.get("/", (req, res, next) => {
+    res.json({
+        "Hello":"world"
+    });
+   });
 
 app.post("/upload-w3s", (req, res, next) => {
     res.json({
