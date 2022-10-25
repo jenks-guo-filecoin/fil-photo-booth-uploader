@@ -12,8 +12,7 @@ app.get('/', (req, res) => {
     res.send('Yes, Gary, it is working...')
 })
 
-app.post("/upload-w3s", multer().single(), async (req, res, next) => {
-    
+app.post("/upload-w3s", multer().single('media'), async (req, res, next) => {
     const photo = req.file;
     const username = req.body.username;
     const password = req.body.password;
