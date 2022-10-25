@@ -34,7 +34,7 @@ app.post("/upload-w3s", multer().single(), async (req, res, next) => {
     
             res.json({
                 "status": true,
-                "error": "",
+                "error": "error message is not successful",
                 "url": "https://" + cid + ".ipfs.nftstorage.link/" + photo.originalname
             });
 
