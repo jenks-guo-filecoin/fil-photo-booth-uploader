@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000
 dotenv.config();
 
 app.get('/', (req, res) => {
-    res.send('Yes, it is working...')
+    res.send('Yes, Gary, it is working...')
 })
 
 app.post("/upload-w3s", multer().single(), async (req, res, next) => {
@@ -20,10 +20,6 @@ app.post("/upload-w3s", multer().single(), async (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
-    console.log(req.body);
-    console.log(username);
-    console.log(password);
-
 
     if (username == process.env.SPARKBOOTH_USER && password == process.env.SPARKBOOTH_PASSWORD ) {
 
