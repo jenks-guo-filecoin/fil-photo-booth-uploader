@@ -22,7 +22,7 @@ app.post("/upload-w3s", multer().single('media'), async (req, res, next) => {
 
     if (username == process.env.SPARKBOOTH_USER && password == process.env.SPARKBOOTH_PASSWORD ) {
 
-        const file = new File(photo.buffer, photo.originalname, {type: 'image/jpeg'});
+        const file = new File([new Uint8Array(photo.buffer)], photo.originalname, {type: 'image/jpeg'});
 
         try {
             var client = new Web3Storage({ token: process.env.W3S_API_TOKEN })
